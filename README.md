@@ -71,3 +71,11 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+## dicas
+
+mudar o settings.json e incluir
+"editor.codeActionsOnSave": {
+"source.fixAll.eslint": true
+},
+"eslint.validate": ["javascript"]
