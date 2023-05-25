@@ -79,3 +79,16 @@ mudar o settings.json e incluir
 "source.fixAll.eslint": true
 },
 "eslint.validate": ["javascript"]
+
+Criar um module
+nest g module user
+
+Criar um controller
+nest g controller user
+
+Criar um service
+nest g service user
+
+Para criptografar a senha
+npm i bcrypt
+npm i -D @types/bcrypt
