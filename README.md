@@ -80,6 +80,14 @@ mudar o settings.json e incluir
 },
 "eslint.validate": ["javascript"]
 
+Começar as configurações
+npm i --save @nestjs/config
+verificar documentação. :> https://docs.nestjs.com/techniques/configuration
+
+Instalar Conexão com banco
+https://docs.nestjs.com/recipes/sql-typeorm
+npm install --save typeorm pg @nestjs/typeorm
+
 Criar um module
 nest g module user
 
