@@ -100,3 +100,5 @@ nest g service user
 Para criptografar a senha
 npm i bcrypt
 npm i -D @types/bcrypt
+
+ultima aula: https://www.youtube.com/watch?v=9KOZ8ZhchpQ&list=PLedVhPP7RyiIOJ7R4lqXtWa4x-GX-x7rO&index=7
