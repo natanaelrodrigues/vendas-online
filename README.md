@@ -88,6 +88,9 @@ Instalar Conexão com banco
 https://docs.nestjs.com/recipes/sql-typeorm
 npm install --save typeorm pg @nestjs/typeorm
 
+Para criar uma migration
+npx typeorm migration:create ./src/migrations/create_table_user
+
 Criar um module
 nest g module user
 
@@ -101,4 +104,4 @@ Para criptografar a senha
 npm i bcrypt
 npm i -D @types/bcrypt
 
-ultima aula: https://www.youtube.com/watch?v=9KOZ8ZhchpQ&list=PLedVhPP7RyiIOJ7R4lqXtWa4x-GX-x7rO&index=7
+ultima aula: https://www.youtube.com/watch?v=b5s02aQTOh8&list=PLedVhPP7RyiIOJ7R4lqXtWa4x-GX-x7rO&index=9
