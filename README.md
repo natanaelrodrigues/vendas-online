@@ -104,4 +104,4 @@ Para criptografar a senha
 npm i bcrypt
 npm i -D @types/bcrypt
 
-ultima aula: https://www.youtube.com/watch?v=b5s02aQTOh8&list=PLedVhPP7RyiIOJ7R4lqXtWa4x-GX-x7rO&index=9
+ultima aula: https://www.youtube.com/watch?v=tH56ijYRL4s&list=PLedVhPP7RyiIOJ7R4lqXtWa4x-GX-x7rO&index=10
