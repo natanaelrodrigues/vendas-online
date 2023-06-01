@@ -104,4 +104,7 @@ Para criptografar a senha
 npm i bcrypt
 npm i -D @types/bcrypt
 
+Criar cache de consulta, exemplo cidade e estado
+npm i cache-manager
+
 ultima aula: https://www.youtube.com/watch?v=tH56ijYRL4s&list=PLedVhPP7RyiIOJ7R4lqXtWa4x-GX-x7rO&index=10
