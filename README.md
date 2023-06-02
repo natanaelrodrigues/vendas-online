@@ -107,4 +107,4 @@ npm i -D @types/bcrypt
 Criar cache de consulta, exemplo cidade e estado
 npm i cache-manager
 
-ultima aula: https://www.youtube.com/watch?v=e-UUQIGtXWM&list=PLedVhPP7RyiIOJ7R4lqXtWa4x-GX-x7rO&index=11
+ultima aula: https://www.youtube.com/watch?v=rIHe5QQ0L0U&list=PLedVhPP7RyiIOJ7R4lqXtWa4x-GX-x7rO&index=12
