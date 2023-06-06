@@ -30,7 +30,7 @@ export class CityService {
     });
 
     if (!city) {
-      throw new NotFoundException('cityId not found');
+      throw new NotFoundException(`cityId ${cityId}  not found`);
     }
 
     return city;
