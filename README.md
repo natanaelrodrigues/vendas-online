@@ -107,4 +107,7 @@ npm i -D @types/bcrypt
 Criar cache de consulta, exemplo cidade e estado
 npm i cache-manager
 
+Criar classes de validação/DTO
+npm i --save class-validator class-transformer
+
 ultima aula: https://www.youtube.com/watch?v=rIHe5QQ0L0U&list=PLedVhPP7RyiIOJ7R4lqXtWa4x-GX-x7rO&index=12
