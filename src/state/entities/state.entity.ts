@@ -1,3 +1,4 @@
+import { AddressEntity } from 'src/address/entities/address.entity';
 import { CityEntity } from '../../city/entities/city.entity';
 import {
   Column,
@@ -22,9 +23,12 @@ export class StateEntity {
   @CreateDateColumn({ name: 'created_at' })
   createdAt: Date;
 
-  // @UpdateDateColumn({ name: 'updated_at' })
-  // updatedAt: Date;
+  @UpdateDateColumn({ name: 'updated_at' })
+  updatedAt: Date;
 
-  // @OneToMany(() => CityEntity, (city) => city.state)
-  // cities?: CityEntity[];
+  @OneToMany(() => AddressEntity, (Address) => Address.city)
+  addresses?: AddressEntity[];
+
+  @OneToMany(() => CityEntity, (city) => city.state)
+  cities?: CityEntity[];
 }

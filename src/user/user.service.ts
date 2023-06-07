@@ -30,7 +30,7 @@ export class UserService {
       where: {
         id: userId,
       },
-      relations: ['address'],
+      relations: ['addresses'],
     });
   }
 
