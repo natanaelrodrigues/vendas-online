@@ -6,7 +6,6 @@ import {
   Entity,
   JoinColumn,
   ManyToOne,
-  OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
@@ -38,9 +37,9 @@ export class AddressEntity {
   @UpdateDateColumn({ name: 'updated_at' })
   updatedAt: Date;
 
-  //   @ManyToOne(() => UserEntity, (user) => user.addresses)
-  //   @JoinColumn({ name: 'user_id', referencedColumnName: 'id' })
-  //   user?: UserEntity;
+  @ManyToOne(() => UserEntity, (user) => user.addresses)
+  @JoinColumn({ name: 'user_id', referencedColumnName: 'id' })
+  user?: UserEntity;
 
   //   @ManyToOne(() => CityEntity, (city) => city.addresses)
   //   @JoinColumn({ name: 'city_id', referencedColumnName: 'id' })
