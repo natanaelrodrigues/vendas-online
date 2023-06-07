@@ -110,4 +110,4 @@ npm i cache-manager
 Criar classes de validação/DTO
 npm i --save class-validator class-transformer
 
-ultima aula: https://www.youtube.com/watch?v=eYnUisoDrxs
+ultima aula: https://www.youtube.com/watch?v=eYnUisoDrxs&list=PLedVhPP7RyiIOJ7R4lqXtWa4x-GX-x7rO&index=16
