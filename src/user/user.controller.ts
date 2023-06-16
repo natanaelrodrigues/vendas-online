@@ -7,10 +7,10 @@ import {
   ValidationPipe,
   Param,
 } from '@nestjs/common';
-import { CreateUserDto } from './dto/createUser.dto';
+import { CreateUserDto } from './dtos/createUser.dto';
 import { UserService } from './user.service';
-import { UserEntity } from 'src/user/entities/user.entity';
-import { ReturnUserDto } from './dto/returnUser.dto';
+import { UserEntity } from '../user/entities/user.entity';
+import { ReturnUserDto } from './dtos/returnUser.dto';
 
 @Controller('user')
 export class UserController {
