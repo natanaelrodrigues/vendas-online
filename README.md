@@ -113,4 +113,4 @@ npm i --save class-validator class-transformer
 Instalação do jwt
 npm install --save @nestjs/jwt
 
-ultima aula: https://www.youtube.com/watch?v=7gaV1Mpn5hs&list=PLedVhPP7RyiIOJ7R4lqXtWa4x-GX-x7rO&index=28
+ultima aula: https://www.youtube.com/watch?v=-mnNnXBFuqw&list=PLedVhPP7RyiIOJ7R4lqXtWa4x-GX-x7rO&index=29
