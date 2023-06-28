@@ -9,6 +9,7 @@ import { hash } from 'bcrypt';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import {} from 'rxjs';
+import { UserType } from './enum/user-type.enum';
 
 @Injectable()
 export class UserService {
@@ -32,7 +33,7 @@ export class UserService {
 
     return this.userRepository.save({
       ...createUserDto,
-      typeUser: 1,
+      typeUser: UserType.User,
       password: passwordHash,
     });
   }
