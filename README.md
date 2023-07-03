@@ -30,20 +30,6 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
-
 ## dicas
 
 mudar o settings.json e incluir
@@ -85,4 +71,4 @@ npm i --save class-validator class-transformer
 Instalação do jwt
 npm install --save @nestjs/jwt
 
-ultima aula: https://www.youtube.com/watch?v=k-snSGHfs4Q&list=PLedVhPP7RyiIOJ7R4lqXtWa4x-GX-x7rO&index=32
+ultima aula: https://www.youtube.com/watch?v=k-snSGHfs4Q&list=PLedVhPP7RyiIOJ7R4lqXtWa4x-GX-x7rO&index=34
