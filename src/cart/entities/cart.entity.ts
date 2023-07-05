@@ -1,4 +1,4 @@
-//import { CartProductEntity } from '../../cart-product/entities/cart-product.entity';
+import { CartProductEntity } from 'src/cart-product/entities/cart-product.entitye';
 import {
   Column,
   CreateDateColumn,
@@ -25,6 +25,6 @@ export class CartEntity {
   @UpdateDateColumn({ name: 'updated_at' })
   updatedAt: Date;
 
-  //   @OneToMany(() => CartProductEntity, (cartProduct) => cartProduct.cart)
-  //   cartProduct?: CartProductEntity[];
+  @OneToMany(() => CartProductEntity, (cartProduct) => cartProduct.cart)
+  cartProduct?: CartProductEntity[];
 }
