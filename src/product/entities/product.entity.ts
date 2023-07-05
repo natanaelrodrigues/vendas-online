@@ -10,7 +10,6 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
-//import { CartProductEntity } from '../../cart-product/entities/cart-product.entity';
 //import { OrderProductEntity } from "../../order-product/entities/order-product.entity";
 
 @Entity({ name: 'product' })
