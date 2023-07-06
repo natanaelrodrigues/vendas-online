@@ -1,4 +1,4 @@
-import { ProductEntity } from "../../product/entities/product.entity";
+import { ProductEntity } from '../../product/entities/product.entity';
 import {
   Column,
   CreateDateColumn,
@@ -6,20 +6,20 @@ import {
   OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
-} from "typeorm";
+} from 'typeorm';
 
-@Entity({ name: "category" })
+@Entity({ name: 'category' })
 export class CategoryEntity {
-  @PrimaryGeneratedColumn("rowid")
+  @PrimaryGeneratedColumn('rowid')
   id: number;
 
-  @Column({ name: "name", nullable: false })
+  @Column({ name: 'name', nullable: false })
   name: string;
 
-  @CreateDateColumn({ name: "created_at" })
+  @CreateDateColumn({ name: 'created_at' })
   createdAt: Date;
 
-  @UpdateDateColumn({ name: "updated_at" })
+  @UpdateDateColumn({ name: 'updated_at' })
   updatedAt: Date;
 
   @OneToMany(() => ProductEntity, (product: ProductEntity) => product.category)

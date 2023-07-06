@@ -1,4 +1,4 @@
-import { CartProductEntity } from 'src/cart-product/entities/cart-product.entitye';
+import { CartProductEntity } from '../../cart-product/entities/cart-product.entity';
 import {
   Column,
   CreateDateColumn,

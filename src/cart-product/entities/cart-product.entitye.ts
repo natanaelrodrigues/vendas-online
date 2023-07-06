@@ -1,6 +1,5 @@
 import { CartEntity } from 'src/cart/entities/cart.entity';
 import { ProductEntity } from 'src/product/entities/product.entity';
-
 import {
   Column,
   CreateDateColumn,

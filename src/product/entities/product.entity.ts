@@ -1,4 +1,3 @@
-import { CartProductEntity } from 'src/cart-product/entities/cart-product.entitye';
 import { CategoryEntity } from '../../category/entities/category.entity';
 import {
   Column,
@@ -10,7 +9,8 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
-//import { OrderProductEntity } from "../../order-product/entities/order-product.entity";
+import { CartProductEntity } from '../../cart-product/entities/cart-product.entity';
+import { OrderProductEntity } from '../../order-product/entities/order-product.entity';
 
 @Entity({ name: 'product' })
 export class ProductEntity {
@@ -29,20 +29,20 @@ export class ProductEntity {
   @Column({ name: 'image', nullable: false })
   image: string;
 
-  // @Column({ name: "weight", nullable: false })
-  // weight: number;
+  @Column({ name: 'weight', nullable: false })
+  weight: number;
 
-  // @Column({ name: "length", nullable: false })
-  // length: number;
+  @Column({ name: 'length', nullable: false })
+  length: number;
 
-  // @Column({ name: "height", nullable: false })
-  // height: number;
+  @Column({ name: 'height', nullable: false })
+  height: number;
 
-  // @Column({ name: "width", nullable: false })
-  // width: number;
+  @Column({ name: 'width', nullable: false })
+  width: number;
 
-  // @Column({ name: "diameter", nullable: false })
-  // diameter: number;
+  @Column({ name: 'diameter', nullable: false })
+  diameter: number;
 
   @CreateDateColumn({ name: 'created_at' })
   createdAt: Date;
@@ -60,6 +60,6 @@ export class ProductEntity {
   @JoinColumn({ name: 'category_id', referencedColumnName: 'id' })
   category?: CategoryEntity;
 
-  //@OneToMany(() => OrderProductEntity, (orderProduct) => orderProduct.product)
-  //ordersProduct?: OrderProductEntity[];
+  @OneToMany(() => OrderProductEntity, (orderProduct) => orderProduct.product)
+  ordersProduct?: OrderProductEntity[];
 }

@@ -1,17 +1,16 @@
 import {
+  BadGatewayException,
+  BadRequestException,
   Injectable,
   NotFoundException,
-  BadRequestException,
 } from '@nestjs/common';
-import { CreateUserDto } from './dtos/createUser.dto';
-import { UserEntity } from './entities/user.entity';
-import { hash } from 'bcrypt';
 import { InjectRepository } from '@nestjs/typeorm';
+import { createPasswordHashed, validatePassword } from '../utils/password';
 import { Repository } from 'typeorm';
-import {} from 'rxjs';
-import { UserType } from './enum/user-type.enum';
+import { CreateUserDto } from './dtos/createUser.dto';
 import { UpdatePasswordDTO } from './dtos/update-password.dto';
-import { createPasswordHashed, validatePassword } from 'src/utils/password';
+import { UserEntity } from './entities/user.entity';
+import { UserType } from './enum/user-type.enum';
 
 @Injectable()
 export class UserService {
@@ -20,21 +19,23 @@ export class UserService {
     private readonly userRepository: Repository<UserEntity>,
   ) {}
 
-  async createUser(createUserDto: CreateUserDto): Promise<UserEntity> {
+  async createUser(
+    createUserDto: CreateUserDto,
+    userType?: number,
+  ): Promise<UserEntity> {
     const user = await this.findUserByEmail(createUserDto.email).catch(
       () => undefined,
     );
 
     if (user) {
-      throw new BadRequestException('email registered in System');
+      throw new BadGatewayException('email registered in system');
     }
-
-    const passwordHash = await createPasswordHashed(createUserDto.password);
+    const passwordHashed = await createPasswordHashed(createUserDto.password);
 
     return this.userRepository.save({
       ...createUserDto,
-      typeUser: UserType.User,
-      password: passwordHash,
+      typeUser: userType ? userType : UserType.User,
+      password: passwordHashed,
     });
   }
 
@@ -65,7 +66,7 @@ export class UserService {
     });
 
     if (!user) {
-      throw new NotFoundException(`UserId ${userId} not found`);
+      throw new NotFoundException(`UserId: ${userId} Not Found`);
     }
 
     return user;
@@ -79,7 +80,7 @@ export class UserService {
     });
 
     if (!user) {
-      throw new NotFoundException(`Email ${email} not found`);
+      throw new NotFoundException(`Email: ${email} Not Found`);
     }
 
     return user;
@@ -91,7 +92,7 @@ export class UserService {
   ): Promise<UserEntity> {
     const user = await this.findUserById(userId);
 
-    const passwordHash = await createPasswordHashed(
+    const passwordHashed = await createPasswordHashed(
       updatePasswordDTO.newPassword,
     );
 
@@ -101,12 +102,12 @@ export class UserService {
     );
 
     if (!isMatch) {
-      throw new BadRequestException('Last password invalid!');
+      throw new BadRequestException('Last password invalid');
     }
 
     return this.userRepository.save({
       ...user,
-      password: passwordHash,
+      password: passwordHashed,
     });
   }
 }
